@@ -40,38 +40,90 @@ namespace ConsoleApp1
             const int TOTALCENTS10 = 10;
             const int TOTALCENTS5 = 5;
 
-            int totalCents, totalFifties, totalTwenties, totalTens, remainder = 0;
+            int totalCents, totalFifties, totalTwenties, totalTens,
+                totalFives, totalTwos, totalOnes, totalFiftiesC,
+                totalTwentiesC, totalTensC, totalFivesC, remainder = 0;
 
-            double initialMoneyAmount = 125.25; //12525
+            double initialMoneyAmount = 125.25;
+            totalCents = (int)(initialMoneyAmount * 100);
 
-            totalCents = (int)(initialMoneyAmount * 100); //12525
+            totalFifties = totalCents / TOTALEURO50;
+            remainder = totalCents % TOTALEURO50;
 
-            totalFifties = totalCents / TOTALEURO50; //2
-            remainder = totalCents % TOTALEURO50; //2525
-
-            Console.WriteLine("Total fifty euro notes is "
-                             + totalFifties + " help me please");
-            Console.WriteLine("Current remainder is "
-                             + remainder);
+            Console.WriteLine("Total fifty euro notes is " + totalFifties);
+            Console.WriteLine("Current remainder is " + remainder);
 
 
-            totalTwenties = remainder / TOTALEURO20; //2
-            remainder = totalCents % TOTALEURO20; //2525
 
-            Console.WriteLine("Total Twenty euro notes is "
-                             + totalTwenties + " help me please");
-            Console.WriteLine("Current remainder is "
-                             + remainder);
+            totalTwenties = remainder / TOTALEURO20;
+            remainder = remainder % TOTALEURO20;
 
-            Console.ReadKey();
+            Console.WriteLine("Total Twenty euro notes is " + totalTwenties);
+            Console.WriteLine("Current remainder is " + remainder);
 
-            totalTens = remainder / TOTALEURO10; //2
-            remainder = totalCents % TOTALEURO10; //2525
 
-            Console.WriteLine("Total Ten euro notes is "
-                             + totalTens + " help me please");
-            Console.WriteLine("Current remainder is "
-                             + remainder);
+
+            totalTens = remainder / TOTALEURO10;
+            remainder = remainder % TOTALEURO10;
+
+            Console.WriteLine("Total Ten euro notes is " + totalTens);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalFives = remainder / TOTALEURO5;
+            remainder = remainder % TOTALEURO5;
+
+            Console.WriteLine("Total Five euro notes is " + totalFives);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalTwos = remainder / TOTALEURO2;
+            remainder = remainder % TOTALEURO2;
+
+            Console.WriteLine("Total Two euro notes is " + totalTwos);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalOnes = remainder / TOTALEURO1;
+            remainder = remainder % TOTALEURO1;
+
+            Console.WriteLine("Total One euro notes is " + totalOnes);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalFiftiesC = remainder / TOTALCENTS50;
+            remainder = remainder % TOTALCENTS50;
+
+            Console.WriteLine("Total fifty cents notes is " + totalFiftiesC);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalTwentiesC = remainder / TOTALCENTS20;
+            remainder = remainder % TOTALCENTS20;
+
+            Console.WriteLine("Total twenty cents notes is " + totalTwentiesC);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalTensC = remainder / TOTALCENTS10;
+            remainder = remainder % TOTALCENTS10;
+
+            Console.WriteLine("Total ten cents notes is " + totalTensC);
+            Console.WriteLine("Current remainder is " + remainder);
+
+
+
+            totalFivesC = remainder / TOTALCENTS5;
+            remainder = remainder % TOTALCENTS5;
+
+            Console.WriteLine("Total five cents notes is " + totalFivesC);
+            Console.WriteLine("Current remainder is " + remainder);
 
             Console.ReadKey();
 
