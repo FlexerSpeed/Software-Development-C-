@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Program
+    internal class SWD_Day1
     {
         private static decimal v;
 
         static void Main(string[] args)
         {
             // SOLUTION 1
-            Console.WriteLine("Enter the amount of money");
+            /* Console.WriteLine("Enter the amount of money");
             v = Convert.ToDecimal(Console.ReadLine());
             var amount = v;
             decimal[] denominations = { 50m, 20m, 10m, 5m, 2m, 1m, 0.5m, 0.2m, 0.1m, 0.05m };
@@ -31,11 +31,11 @@ namespace ConsoleApp1
                     Console.WriteLine($"Total €{denominations[i]}s is {counts[i]}");
                 }
             }
-            Console.ReadKey();
+            Console.ReadKey(); */
 
-            // SOLUTION 2
+            //SOLUTION 2
 
-            /* const int TOTALEURO50 = 5000;
+            const int TOTALEURO50 = 5000;
             const int TOTALEURO20 = 2000;
             const int TOTALEURO10 = 1000;
             const int TOTALEURO5 = 500;
@@ -131,7 +131,7 @@ namespace ConsoleApp1
             Console.WriteLine("Total five cents notes is " + totalFivesC);
             Console.WriteLine("Current remainder is " + remainder);
 
-            Console.ReadKey(); */
+            Console.ReadKey(); 
 
         }
     }
